@@ -16,6 +16,8 @@ echo $x-$y."<br>";
 
 echo $x*$y."<br>";
 
+echo $x/$y."<br>";
+
 
 
 ?>
