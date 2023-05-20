@@ -27,6 +27,9 @@ $y = 13;
 $z = $x*$y;
 echo $z."<br>";
 
-
+$x = 4;
+echo pow($x,1)."<br>";
+echo pow($x,2)."<br>";
+echo pow($x,3)."<br>";
 
 ?>
