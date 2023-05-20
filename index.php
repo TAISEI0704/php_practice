@@ -32,4 +32,13 @@ echo pow($x,1)."<br>";
 echo pow($x,2)."<br>";
 echo pow($x,3)."<br>";
 
+$x = 14;
+$y = 11;
+if($x > $y){
+    echo "xはyより大きい<br>";
+}
+
+
+
+
 ?>
