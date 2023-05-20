@@ -78,4 +78,19 @@ if($x >= 100 || $x <=10){
     echo $x."は10以下または100以上<br>";
 }
 
+$x = "dog";
+switch($x){
+    case "dog":
+        echo "犬<br>";
+        break;
+    
+    case "cat":
+        echo "猫<br>";
+        break;
+
+    default:
+        echo "犬と猫以外<br>";
+        break;
+}
+
 ?>
