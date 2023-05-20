@@ -149,4 +149,112 @@ switch($month){
 
 }
 
+for($i=0; $i<10; $i++){
+    echo "hoge";
+    echo " ";
+}
+
+echo "<br>";
+
+for($i=1; $i<=10; $i++){
+    echo $i;
+    echo " ";
+}
+
+echo "<br>";
+
+for($i=1; $i<10; $i++){
+    $x = 2*$i;
+    echo $x." ";
+}
+
+echo "<br>";
+
+for($i=1; $i<=100; $i++){
+    if($i%2 === 1){
+        continue;
+    }
+
+    echo $i." ";
+}
+
+echo "<br>";
+
+for($i=1; $i<=100; $i++){
+    if($i%2 === 0){
+        echo $i." ";
+        continue;
+    }
+
+    echo "奇数です";
+    echo " ";
+}
+
+echo "<br>";
+
+$i = 1;
+while($i<=100){
+    if($i%3 === 0){
+        echo $i." ";
+    }
+
+    $i++;
+}
+
+echo "<br>";
+
+$i=1;
+while($i<=100){
+    if($i%5===0){
+        echo $i." ";
+    }
+
+    $i++;
+
+}
+
+echo "<br>";
+
+$i=1;
+while($i<=100){
+    if($i%15===0){
+        echo $i." ";
+    }
+
+    $i++;
+
+}
+
+echo "<br>";
+
+for($i=1; $i<=100; $i++){
+    if($i%3===0){
+        echo "Fizz";
+    }else{
+        echo $i;
+    }
+
+    echo " ";
+
+}
+
+echo "<br>";
+
+$i=1;
+while($i<=100){
+    if($i%15===0){
+        echo "FizzBuzz";
+    }elseif($i%3===0){
+        echo "Fizz";
+    }elseif($i%5===0){
+        echo "Buzz";
+    }else{
+        echo $i;
+    }
+
+    echo " ";
+
+    $i++;
+}
+
 ?>
