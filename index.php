@@ -8,6 +8,10 @@ $lastName = "Kusunoki";
 $firstName = "Taisei";
 echo $lastName.$firstName."<br>";
 
+$x = 10;
+$y = 2;
+echo $x+$y."<br>";
+
 
 
 ?>
