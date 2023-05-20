@@ -18,6 +18,10 @@ echo $x*$y."<br>";
 
 echo $x/$y."<br>";
 
+$y = 3;
+
+echo $x%$y."<br>";
+
 
 
 ?>
