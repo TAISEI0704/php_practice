@@ -44,5 +44,12 @@ if($x >= $y){
     echo $x."は".$y."より小さい<br>";
 }
 
+if($x > $y){
+    echo $x."は".$y."より大きい<br>";
+}elseif($x < $y){
+    echo $x."は".$y."より小さい<br>";
+}else{
+    echo $x."と".$y."は等しい<br>";
+}
 
 ?>
