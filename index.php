@@ -288,4 +288,59 @@ foreach($animals as $animal){
     echo " ";
 }
 
+echo "<br>";
+
+$alphabet = ["a"=>"A",
+             "b"=>"B",
+             "c"=>"C",
+             "d"=>"D"];
+
+$alphabet["e"] = "E";
+
+var_dump($alphabet);
+echo "<br>";
+
+$alphabet["a"] = "AAA";
+
+unset($alphabet["b"]);
+var_dump($alphabet);
+echo "<br>";
+
+foreach($alphabet as $key=>$value){
+    echo $key;
+    echo " ";
+}
+
+echo "<br>";
+
+foreach($alphabet as $key => $value){
+    echo $value;
+    echo " ";
+}
+
+echo "<br>";
+
+foreach($alphabet as $key => $value){
+    echo $key.":".$value;
+    echo " ";
+}
+
+echo "<br>";
+
+foreach($alphabet as $key => $value){
+    if($key !== "c"){
+        echo $key.":".$value;
+        echo " "; 
+    }
+}
+
+echo "<br>";
+
+foreach($alphabet as $key => $value){
+    if($key !== "b" || $value !== "C"){
+        echo $key.":".$value;
+        echo " ";
+    }
+}
+
 ?>
