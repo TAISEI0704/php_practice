@@ -343,96 +343,197 @@
 //     }
 // }
 
-function printHoge(){
-    echo "Hoge";
-}
+// function printHoge(){
+//     echo "Hoge";
+// }
 
-printHoge();
+// printHoge();
+// echo "<br>";
+
+// function printNum($num){
+//     echo $num;
+// }
+// printNum(5);
+// echo "<br>";
+
+// function printKuku($kuku){
+//     for($i=1; $i<10; $i++){
+//         echo $kuku*$i;
+//         echo " ";
+//     }
+// }
+// printKuku(7);
+// echo "<br>";
+
+// function printEven($num){
+//     if($num%2===0){
+//         echo "偶数<br>";
+//     }else{
+//         echo "奇数<br>";
+//     }
+// }
+
+// printEven(8);
+
+// function printMessage($string,$num){
+//     for($i=1; $i<=$num; $i++){
+//         echo $string." ";
+//     }
+// }
+
+// printMessage("taisei",5);
+// echo "<br>";
+
+// function printMaxNum($num1,$num2){
+//     if($num1===$num2){
+//         echo "同じ";
+//     }elseif($num1>$num2){
+//         echo $num1;
+//     }else{
+//         echo $num2;
+//     }
+// }
+
+// printMaxNum(7,11);
+// echo "<br>";
+
+// function getSquared($num){
+//     return $num*$num;
+// }
+
+// echo getSquared(8);
+// echo "<br>";
+
+// function profile($name){
+//     $msg="私の名前は".$name."です";
+//     return $msg;
+// }
+
+// echo profile("taisei");
+// echo "<br>";
+
+// function isEvenNumber($num){
+//     if($num%2===0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// var_dump(isEvenNumber(7));
+// echo "<br>";
+
+
+// function isTaro($name){
+//     if($name==="Taro"){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// var_dump(isTaro("Taro"));
+
+$school = "SeedTech";
+echo substr($school, 4,4);
+
 echo "<br>";
 
-function printNum($num){
-    echo $num;
-}
-printNum(5);
+$school = "SoodTech";
+echo str_replace("Sood", "Seed", $school);
+
 echo "<br>";
 
-function printKuku($kuku){
-    for($i=1; $i<10; $i++){
-        echo $kuku*$i;
-        echo " ";
+date_default_timezone_set("Asia/Tokyo");
+sleep(2);
+echo date("y-m-d h:i:s");
+
+echo "<br>";
+
+$list = [10,-500,30,"1000","1B",0.8,[9],"5,000",2021];
+foreach($list as $item){
+    if(is_numeric($item)){
+        echo $item."\n";
     }
 }
-printKuku(7);
+
 echo "<br>";
 
-function printEven($num){
-    if($num%2===0){
-        echo "偶数<br>";
-    }else{
-        echo "奇数<br>";
+$list = [100,1000,550];
+echo max($list);
+
+echo "<br>";
+
+$list = ["a","b","c","d"];
+$list = array_reverse($list);
+foreach($list as $item){
+    echo $item."\n";
+}
+
+echo "<br>";
+
+$word = "ABCDEFGHIJKLMNOPQRST";
+$words = str_split($word, 5);
+foreach($words as $word){
+    echo $word."\n";
+}
+
+echo "<br>";
+
+$years=[1800,2000,2020];
+
+function year($year){
+    return checkdate(2,29,$year);
+}
+
+foreach($years as $year){
+    if(year($year)){
+        echo $year."\n";
     }
 }
 
-printEven(8);
+echo "<br>";
 
-function printMessage($string,$num){
-    for($i=1; $i<=$num; $i++){
-        echo $string." ";
+class PHP{
+    public $name;
+
+    public $sentence;
+
+    public function __construct($name,$sentence){
+        $this->name = $name;
+        $this->sentence = $sentence;
     }
-}
 
-printMessage("taisei",5);
-echo "<br>";
-
-function printMaxNum($num1,$num2){
-    if($num1===$num2){
-        echo "同じ";
-    }elseif($num1>$num2){
-        echo $num1;
-    }else{
-        echo $num2;
+    public function call(){
+       echo $this->name.$this->sentence;
     }
+
 }
 
-printMaxNum(7,11);
+
+$php = new PHP('PHP','をマスターしよう');
+$php->call();
+
 echo "<br>";
 
-function getSquared($num){
-    return $num*$num;
-}
+// $url = "https://seedtech.co.jp/";
+// header("Location:$url");
+// exit;
 
-echo getSquared(8);
 echo "<br>";
 
-function profile($name){
-    $msg="私の名前は".$name."です";
-    return $msg;
-}
+//値渡し
+$a = 5;
+$b = $a;
+$a = 10;
+echo $b;
 
-echo profile("taisei");
 echo "<br>";
 
-function isEvenNumber($num){
-    if($num%2===0){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-var_dump(isEvenNumber(7));
-echo "<br>";
-
-
-function isTaro($name){
-    if($name==="Taro"){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-var_dump(isTaro("Taro"));
-
+//参照渡し
+$a = 5;
+$b = & $a;
+$a = 10;
+echo $b;
 
 ?>
