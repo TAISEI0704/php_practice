@@ -257,90 +257,182 @@
 //     $i++;
 // }
 
-$array = [1,2,3,4,5,6,7,8,9,10];
+// $array = [1,2,3,4,5,6,7,8,9,10];
 
-var_dump($array);
-echo "<br>";
+// var_dump($array);
+// echo "<br>";
 
-$array = ["A","B","C","D","E"];
+// $array = ["A","B","C","D","E"];
 
-var_dump($array);
-echo "<br>";
+// var_dump($array);
+// echo "<br>";
 
-$animals = ["dog","fox","monkey"];
+// $animals = ["dog","fox","monkey"];
 
-var_dump($animals);
-echo "<br>";
+// var_dump($animals);
+// echo "<br>";
 
-$animals[] = "elephant";
-var_dump($animals);
-echo "<br>";
+// $animals[] = "elephant";
+// var_dump($animals);
+// echo "<br>";
 
-$animals[0] = "cat";
-echo "<br>";
+// $animals[0] = "cat";
+// echo "<br>";
 
-unset($animals["1"]);
-var_dump($animals);
-echo "<br>";
+// unset($animals["1"]);
+// var_dump($animals);
+// echo "<br>";
 
-foreach($animals as $animal){
-    echo $animal;
-    echo " ";
+// foreach($animals as $animal){
+//     echo $animal;
+//     echo " ";
+// }
+
+// echo "<br>";
+
+// $alphabet = ["a"=>"A",
+//              "b"=>"B",
+//              "c"=>"C",
+//              "d"=>"D"];
+
+// $alphabet["e"] = "E";
+
+// var_dump($alphabet);
+// echo "<br>";
+
+// $alphabet["a"] = "AAA";
+
+// unset($alphabet["b"]);
+// var_dump($alphabet);
+// echo "<br>";
+
+// foreach($alphabet as $key=>$value){
+//     echo $key;
+//     echo " ";
+// }
+
+// echo "<br>";
+
+// foreach($alphabet as $key => $value){
+//     echo $value;
+//     echo " ";
+// }
+
+// echo "<br>";
+
+// foreach($alphabet as $key => $value){
+//     echo $key.":".$value;
+//     echo " ";
+// }
+
+// echo "<br>";
+
+// foreach($alphabet as $key => $value){
+//     if($key !== "c"){
+//         echo $key.":".$value;
+//         echo " "; 
+//     }
+// }
+
+// echo "<br>";
+
+// foreach($alphabet as $key => $value){
+//     if($key !== "b" || $value !== "C"){
+//         echo $key.":".$value;
+//         echo " ";
+//     }
+// }
+
+function printHoge(){
+    echo "Hoge";
 }
 
+printHoge();
 echo "<br>";
 
-$alphabet = ["a"=>"A",
-             "b"=>"B",
-             "c"=>"C",
-             "d"=>"D"];
-
-$alphabet["e"] = "E";
-
-var_dump($alphabet);
-echo "<br>";
-
-$alphabet["a"] = "AAA";
-
-unset($alphabet["b"]);
-var_dump($alphabet);
-echo "<br>";
-
-foreach($alphabet as $key=>$value){
-    echo $key;
-    echo " ";
+function printNum($num){
+    echo $num;
 }
-
+printNum(5);
 echo "<br>";
 
-foreach($alphabet as $key => $value){
-    echo $value;
-    echo " ";
-}
-
-echo "<br>";
-
-foreach($alphabet as $key => $value){
-    echo $key.":".$value;
-    echo " ";
-}
-
-echo "<br>";
-
-foreach($alphabet as $key => $value){
-    if($key !== "c"){
-        echo $key.":".$value;
-        echo " "; 
-    }
-}
-
-echo "<br>";
-
-foreach($alphabet as $key => $value){
-    if($key !== "b" || $value !== "C"){
-        echo $key.":".$value;
+function printKuku($kuku){
+    for($i=1; $i<10; $i++){
+        echo $kuku*$i;
         echo " ";
     }
 }
+printKuku(7);
+echo "<br>";
+
+function printEven($num){
+    if($num%2===0){
+        echo "偶数<br>";
+    }else{
+        echo "奇数<br>";
+    }
+}
+
+printEven(8);
+
+function printMessage($string,$num){
+    for($i=1; $i<=$num; $i++){
+        echo $string." ";
+    }
+}
+
+printMessage("taisei",5);
+echo "<br>";
+
+function printMaxNum($num1,$num2){
+    if($num1===$num2){
+        echo "同じ";
+    }elseif($num1>$num2){
+        echo $num1;
+    }else{
+        echo $num2;
+    }
+}
+
+printMaxNum(7,11);
+echo "<br>";
+
+function getSquared($num){
+    return $num*$num;
+}
+
+echo getSquared(8);
+echo "<br>";
+
+function profile($name){
+    $msg="私の名前は".$name."です";
+    return $msg;
+}
+
+echo profile("taisei");
+echo "<br>";
+
+function isEvenNumber($num){
+    if($num%2===0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+var_dump(isEvenNumber(7));
+echo "<br>";
+
+
+function isTaro($name){
+    if($name==="Taro"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+var_dump(isTaro("Taro"));
+
 
 ?>
